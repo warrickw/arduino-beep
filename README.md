@@ -3,6 +3,9 @@ Arduino Beep Pattern
 
 Simple library for writing digital on-off patterns to a Arduino digital pin, which could be a buzzer or LED or anything else.
 
+This library was originally written to play different beep patterns on an active 5v pezio buzzer wired directly to a digital output
+pin on my Arduino - but can be used for outputting any sort of binary timed pattern.
+
 ###Pattern definition
 Beep patterns are defined as a sequency of on-off time's... for example, the following int array
 defines a on-off-on-off pattern with 100ms on, 100ms off, and 100ms on (then an assumed off...)
@@ -99,5 +102,5 @@ Installation
 3. This will clone the library into your Arduino libraries.
 4. Restart the Arduino IDE.
 
-Make sure you have also installed Beep's depencancy on Arduino_Vector (in the same manner), available at
+Make sure you have also installed Beep's depencancy on Arduino_Vector (installed in the same manner as above), available at
 https://github.com/zacsketches/Arduino_Vector
