@@ -14,17 +14,24 @@ Beep manager
  */
 class Beep {
 	public:
+		// Initialze a beep manager using the provided pin for output
 		Beep(int pin);
+		// Set the minimum delay (in ms) between patterns
 		void setPatternInterval(int delay);
+		// Queue a beep pattern
 		void beep(int pattern[], int patternLength);
+		// Run a beep pattern that was preset
 		void beep(int presetKey);
+		// Call this every iteration of your arduino sketch's loop
 		void loop();
+		// Register a beep preset
 		void addPreset(int key, int *pattern, int pattern_length);
+		// Clear the beep buffer - try not to use this
 		void clearBuffer();
 	private:
 		int pin;
 		int patternInterval;
-
+		
 		int operationBuffer[64];
 		int operationStartIndex;
 		int operationsLength;
